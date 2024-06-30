@@ -1,37 +1,68 @@
-/* styles.css */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout</title>
+  <style>
+    /* Apply flexbox to body */
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0; /* Remove default margin */
+      height: 100vh; /* Full viewport height */
+    }
 
-/* Apply Flexbox to body and main */
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Ensure full viewport height */
-  margin: 0; /* Remove default margin */
-}
+    /* Apply flexbox to main */
+    main {
+      display: flex;
+      flex-direction: row;
+      flex: auto; /* Allow automatic height and width */
+    }
 
-main {
-  display: flex;
-  flex: auto; /* Take remaining space */
-}
+    /* Style for header */
+    header {
+      background: #f1f1f1; /* Example background color */
+      padding: 20px; /* Example padding */
+      text-align: center; /* Center text */
+    }
 
-/* Flex direction for main */
-main {
-  flex-direction: row; /* Arrange article and aside horizontally */
-}
+    /* Style for footer */
+    footer {
+      background: #f1f1f1; /* Example background color */
+      padding: 20px; /* Example padding */
+      text-align: center; /* Center text */
+    }
 
-/* Set widths using flex */
-article {
-  flex: 2; /* Takes 2/3 of the width */
-  overflow-y: auto; /* Enable vertical scrolling */
-}
+    /* Flex properties for article */
+    article {
+      flex: 2; /* Take 2/3 of the width */
+      padding: 20px; /* Example padding */
+      overflow-y: auto; /* Allow vertical scrolling */
+    }
 
-aside {
-  flex: 1; /* Takes 1/3 of the width */
-  overflow-y: auto; /* Enable vertical scrolling */
-}
-
-/* Styling for header and footer */
-header, footer {
-  background-color: #f8f8f8;
-  padding: 10px;
-  text-align: center;
-}
+    /* Flex properties for aside */
+    aside {
+      flex: 1; /* Take 1/3 of the width */
+      padding: 20px; /* Example padding */
+      overflow-y: auto; /* Allow vertical scrolling */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Content of the &lt;header&gt; tag
+  </header>
+  <main>
+    <article>
+      Content of the &lt;article&gt; tag
+    </article>
+    <aside>
+      Content of the &lt;aside&gt; tag
+    </aside>
+  </main>
+  <footer>
+    Content of the &lt;footer&gt; tag
+  </footer>
+</body>
+</html>
